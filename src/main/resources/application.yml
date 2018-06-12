@@ -1,9 +1,12 @@
 server: 
-  port: 5000
+  port: 7888
 spring:
   application:
     name: eureka-zuul
-
+https:
+  password: 214719198680595
+  file: D:/your-name.jks
+  port: 443
 
 ###################  eureka配置  ###################    
 eureka:
@@ -12,7 +15,7 @@ eureka:
     instance-id: ${eureka.instance.hostname}:${server.port}
   client:
     serviceUrl:
-      defaultZone: http://127.0.0.1:5000/eureka/
+      defaultZone: http://127.0.0.1:7888/eureka/
 
 hystrix:
   command:
@@ -33,7 +36,7 @@ zuul:
   
   routes:
     PinTiDuo-service: 
-      path: /services/**
+      path: /ptd/**
       serviceId: PinTiDuo-service
       sensitiveHeaders: 
    
