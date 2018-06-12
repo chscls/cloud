@@ -33,10 +33,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @EnableEurekaServer
 @EnableZuulProxy
-@EnableEurekaClient
-@EnableFeignClients
-@EnableHystrix
-@EnableHystrixDashboard
 @SpringBootApplication
 public class EurekaZuulApplication {
 	@Autowired

@@ -18,6 +18,7 @@ eureka:
     instance-id: ${eureka.instance.hostname}:${server.port} 
   client:
     registry-fetch-interval-seconds: 5
+    registerWithEureka: false
     serviceUrl:
       defaultZone: http://127.0.0.1:7888/eureka/
        
