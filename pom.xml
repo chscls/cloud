@@ -1,0 +1,329 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+   <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.5.2.RELEASE</version>
+</parent>
+  <groupId>com.cdzhiyong</groupId>
+  <artifactId>cloud</artifactId>
+  <version>1.0</version>
+  <packaging>war</packaging>
+ <properties>
+		<hibernate.version>5.2.4.Final</hibernate.version>
+		<java.version>1.8</java.version>
+	</properties>
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>Dalston.SR1</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+<dependencies>
+<dependency>
+   <groupId>net.coobird</groupId>
+   <artifactId>thumbnailator</artifactId>
+   <version>0.4.8</version>
+</dependency>
+<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+            <version>1.4.1.RELEASE</version>
+        </dependency>
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-config</artifactId>
+        
+    </dependency>
+    <dependency>
+  <groupId>org.apache.httpcomponents</groupId>
+  <artifactId>httpclient</artifactId>
+  </dependency>
+<!-- 
+	<dependency>
+    <groupId>com.sqljdbc</groupId>
+    <artifactId>sqljdbc41</artifactId>
+    <version>41</version>
+     <scope>system</scope>
+      <systemPath>${project.basedir}/extlib/sqljdbc41.jar</systemPath>
+</dependency> -->
+<dependency>
+			<groupId>com.itextpdf.tool</groupId>
+			<artifactId>xmlworker</artifactId>
+			<version>5.5.1</version>
+		</dependency>
+		
+		<!-- 支持中文 -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>itext-asian</artifactId>
+			<version>5.2.0</version>
+		</dependency>
+		<!-- 支持css样式渲染 -->
+		<dependency>
+			<groupId>org.xhtmlrenderer</groupId>
+			<artifactId>flying-saucer-pdf-itext5</artifactId>
+			<version>9.0.3</version>
+		</dependency>
+  <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+    <dependency>
+    <groupId>com.google.zxing</groupId>
+    <artifactId>javase</artifactId>
+    <version>3.3.0</version>
+</dependency>
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-eureka</artifactId>
+        
+    </dependency>
+     <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-websocket</artifactId>
+</dependency>
+  <dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+	<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-redis</artifactId>
+    </dependency>
+
+	<dependency>
+		<groupId>org.json</groupId>
+		<artifactId>json</artifactId>
+		<version>20160810</version>
+	</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka-server</artifactId>
+					</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix</artifactId>
+			
+		</dependency>
+	<dependency>
+		<groupId>jexcelapi</groupId>
+		<artifactId>jxl</artifactId>
+		<version>2.4.2</version>
+	</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zuul</artifactId>
+			
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-feign</artifactId>
+		
+		</dependency>
+	<dependency>
+		<groupId>com.netflix.hystrix</groupId>
+		<artifactId>hystrix-core</artifactId>
+		<version>1.5.12</version>
+	</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-ribbon</artifactId>
+			
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.hibernate</groupId>
+					<artifactId>hibernate-entitymanager</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+  <groupId>org.tensorflow</groupId>
+  <artifactId>libtensorflow</artifactId>
+  <version>1.3.0-rc2</version>
+</dependency>
+	<dependency>
+<groupId>org.tensorflow</groupId>
+  <artifactId>libtensorflow_jni</artifactId>
+  <version>1.3.0-rc2</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.ant</groupId>
+    <artifactId>ant</artifactId>
+    <version>1.8.2</version>
+</dependency>
+ <dependency>
+    <groupId>io.netty</groupId>
+    <artifactId>netty-all</artifactId>
+    <version>4.1.12.Final</version>
+</dependency>
+<dependency>
+    <groupId>org.jasig.cas.client</groupId>
+    <artifactId>cas-client-core</artifactId>
+    <version>3.2.1</version>
+     <exclusions>  
+                <exclusion>  
+                    <groupId>javax.servlet</groupId>  
+                    <artifactId>servlet-api</artifactId>  
+                </exclusion>  
+            </exclusions>  
+</dependency>
+<dependency>
+    <groupId>com.google.protobuf</groupId>
+    <artifactId>protobuf-java</artifactId>
+    <version>3.3.1</version>
+</dependency>
+		<!-- MYSQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.github.debop</groupId>
+			<artifactId>hibernate-redis</artifactId>
+			<version>2.3.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.5</version>
+		</dependency>
+	<dependency>
+		<groupId>commons-httpclient</groupId>
+		<artifactId>commons-httpclient</artifactId>
+		<version>3.1</version>
+	</dependency>
+	<dependency>
+		<groupId>org.json</groupId>
+		<artifactId>json</artifactId>
+		<version>20160810</version>
+	</dependency>
+	<dependency>
+		<groupId>net.sf.json-lib</groupId>
+		<artifactId>json-lib</artifactId>
+		<version>2.4</version>
+		<classifier>jdk15</classifier>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.shiro</groupId>
+		<artifactId>shiro-all</artifactId>
+		<version>1.3.2</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-io</artifactId>
+		<version>1.3.2</version>
+	</dependency>
+	<dependency>
+		<groupId>net.sf.ehcache</groupId>
+		<artifactId>ehcache</artifactId>
+		<version>2.10.3</version>
+	</dependency>
+	<dependency>
+		<groupId>org.htmlparser</groupId>
+		<artifactId>htmllexer</artifactId>
+		<version>2.1</version>
+	</dependency>
+	  <!-- <dependency>
+      <groupId>icepdf-core.jar</groupId>
+      <artifactId>icepdf-core.jar</artifactId>
+      <version>6.2.3</version>
+  <scope>system</scope>
+      <systemPath>${project.basedir}/extlib/icepdf-core.jar</systemPath>
+    </dependency> -->
+    	 <!--  <dependency>
+      <groupId>icepdf-pro.jar</groupId>
+      <artifactId>icepdf-core.jar</artifactId>
+      <version>6.2.3</version>
+  <scope>system</scope>
+      <systemPath>${project.basedir}/extlib/icepdf-pro.jar</systemPath>
+    </dependency> -->
+    	  <dependency>
+    	  	<groupId>org.apache.commons</groupId>
+    	  	<artifactId>commons-email</artifactId>
+    	  	<version>1.4</version>
+    	  </dependency>
+	<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi-scratchpad</artifactId>
+		<version>3.17</version>
+	</dependency>
+	<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>3.17</version>
+</dependency>
+</dependencies>
+<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>1.3.3.RELEASE</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			 <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>2.3</version>
+            <configuration>
+                <warName>${project.artifactId}</warName>
+                <webResources>
+                    <resource>
+                        <directory>extlib/</directory>
+                        <targetPath>WEB-INF/lib</targetPath>
+                        <includes>
+                            <include>**/*.jar</include>
+                        </includes>
+                    </resource>
+                </webResources>
+            </configuration>
+        </plugin>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.2.3</version>
+				<configuration>
+					<imageName>feuyeux/${project.artifactId}</imageName>
+					<dockerDirectory>src/main/docker</dockerDirectory>
+					<resources>
+						<resource>
+							<targetPath>\docker</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+					</resources>
+				</configuration>
+			</plugin>
+		</plugins>
+		<finalName>cloud</finalName>
+	</build>
+	<name>cloud</name>
+</project>
