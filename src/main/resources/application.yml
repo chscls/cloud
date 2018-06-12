@@ -10,12 +10,17 @@ https:
 
 ###################  eureka配置  ###################    
 eureka:
+  server:
+    enable-self-preservation: false        # 关闭自我保护模式（缺省为打开）
+    eviction-interval-timer-in-ms: 5000       # 
   instance: 
     hostname: 127.0.0.1
-    instance-id: ${eureka.instance.hostname}:${server.port}
+    instance-id: ${eureka.instance.hostname}:${server.port} 
   client:
+    registry-fetch-interval-seconds: 5
     serviceUrl:
       defaultZone: http://127.0.0.1:7888/eureka/
+       
 
 hystrix:
   command:
