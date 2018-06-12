@@ -19,7 +19,7 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -27,17 +27,17 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 
 
-
+@EnableEurekaServer
 @EnableZuulProxy
 @EnableEurekaClient
 @EnableFeignClients
 @EnableHystrix
 @EnableHystrixDashboard
 @SpringBootApplication
-public class Application {
+public class EurekaZuulApplication {
 	
 	public static void main(String[] args) {
-			SpringApplication.run(Application.class, args);
+			SpringApplication.run(EurekaZuulApplication.class, args);
 	
 	}
 	 
