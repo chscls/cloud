@@ -33,7 +33,7 @@ zuul:
   
   routes:
     PinTiDuo-service: 
-      path: /ptd/**
+      path: /services/**
       serviceId: PinTiDuo-service
       sensitiveHeaders: 
    
